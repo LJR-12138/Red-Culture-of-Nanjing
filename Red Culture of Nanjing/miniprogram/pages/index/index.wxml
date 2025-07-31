@@ -1,0 +1,17 @@
+<view class="page-section">
+  <view class="header">红色印记·青春讲述</view>
+  <view class="spot-list">
+    <block wx:for="{{spots}}" wx:key="_id">
+      <view class="spot-card" bindtap="goDetail" data-id="{{item._id}}">
+
+      <view class="my-box">
+
+        <image src="{{item.images[0]}}" class="spot-img"></image>
+        <text class="spot-title">{{item.name}}</text>
+
+      </view>
+
+      </view>
+    </block>
+  </view>
+</view>

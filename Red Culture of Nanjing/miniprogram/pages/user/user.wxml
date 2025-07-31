@@ -1,0 +1,35 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+
+<!-- 未登录状态 -->
+<view wx:if="{{!hasLogin}}" class="login-section">
+  <!-- 头像选择 -->
+  <button class="avatar-btn" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button>
+
+  <!-- 昵称输入 -->
+  <form bindsubmit="onSubmit" class="nickname-form">
+    <input type="nickname" name="nickname" placeholder="请输入昵称" class="nickname-input" />
+    <button form-type="submit" class="login-btn">登录</button>
+
+  </form>
+</view>
+
+<!-- 登录后界面 -->
+<view wx:if="{{hasLogin}}" class="profile-section">
+  <view class="profile-info">
+    <image class="avatar" src="{{user.avatarUrl}}"></image>
+    <text class="nickname">{{user.nickname}}</text>
+  </view>
+
+  <view class="menu">
+    <button bindtap="viewMyMessages">我的留言</button>
+    <button bindtap="feedback">建议反馈</button>
+    <button bindtap="goAdmin" wx:if="{{user.role === 'admin'}}">后台管理</button>
+  </view>
+
+  <button class="logout-btn" bindtap="logout">退出登录</button>
+</view>
+
+</view>

@@ -1,0 +1,21 @@
+<!--pages/myMessages/index.wxml-->
+<view class="filter-bar">
+  <picker mode="selector" range="{{filterOptions}}" value="{{currentFilterIndex}}" bindchange="onFilterChange">
+    <view class="picker-text">当前筛选：{{filterOptions[currentFilterIndex]}}</view>
+  </picker>
+</view>
+
+<view class="page-section">
+  <block wx:if="{{filteredMessages.length === 0}}">
+    <view class="empty-tip">暂无留言</view>
+  </block>
+
+  <block wx:for="{{filteredMessages}}" wx:key="_id" wx:for-item="item">
+    <view class="msg-card">
+      <text class="nickname">{{item.nickname}}</text>
+      <text class="time">{{item.formattedTime}}</text>
+      <text class="content">{{item.content}}</text>
+      <button class="btn-delete" data-id="{{item._id}}" bindtap="deleteMessage">删除</button>
+    </view>
+  </block>
+</view>

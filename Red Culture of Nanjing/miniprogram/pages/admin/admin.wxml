@@ -1,0 +1,20 @@
+<view class="page-section">
+  <view class="header">待审核留言</view>
+
+  <block wx:if="{{pending.length === 0}}">
+    <view class="empty-tip">暂无待审核留言</view>
+  </block>
+
+  <block wx:for="{{pending}}" wx:key="_id" wx:for-item="item">
+    <view class="msg-card">
+      <text class="nickname">{{item.nickname}}：</text>
+      <text class="time">{{item.formattedTime}}</text>
+      <text class="content">{{item.content}}</text>
+
+      <view class="button-container">
+        <button class="btn-approve" bindtap="approve" data-id="{{item._id}}">通过</button>
+        <button class="btn-reject" bindtap="reject" data-id="{{item._id}}">删除</button>
+      </view>
+    </view>
+  </block>
+</view>

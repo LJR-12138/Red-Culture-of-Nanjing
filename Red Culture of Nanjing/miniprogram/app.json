@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/message/message",
+    "pages/user/user",
+    "pages/admin/admin",
+    "pages/myMessages/index",
+    "pages/feedback/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#C92C2C",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "红色印记",
+    "backgroundColor": "#F8F8F8",
+    "backgroundTextStyle": "light"
+  },
+  
+    "tabBar": {
+      "color": "#999999",
+      "selectedColor": "#C92C2C",
+      "backgroundColor": "#FFFFFF",
+      "borderStyle": "black",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "static/tabbar/home.png",
+          "selectedIconPath": "static/tabbar/home_active.png"
+        },
+        {
+          "pagePath": "pages/message/message",
+          "text": "留言",
+          "iconPath": "static/tabbar/msg.png",
+          "selectedIconPath": "static/tabbar/msg_active.png"
+        },
+        {
+          "pagePath": "pages/user/user",
+          "text": "我的",
+          "iconPath": "static/tabbar/user.png",
+          "selectedIconPath": "static/tabbar/user_active.png"
+        }
+      ]
+    }
+  
+  
+}

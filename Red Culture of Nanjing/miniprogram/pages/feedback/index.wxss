@@ -1,0 +1,135 @@
+/* pages/feedback/index.wxss */
+
+.page-section {
+  padding: 32rpx;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* 用户留言输入框 */
+textarea {
+  width: 93%;
+  min-height: 220rpx;
+  padding: 24rpx;
+  border: 1px solid #ccc;
+  border-radius: 12rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  line-height: 1.6;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 提交按钮 */
+.btn-red {
+  margin-top: 24rpx;
+  background-color: #e64340;
+  color: #fff;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.15);
+}
+
+/* 管理员模块整体卡片 */
+/* 管理员整体面板 */
+.admin-panel {
+  margin-top: 20rpx;
+  padding: 30rpx;
+  background: #ffffff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+/* Header 栏 */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #f0f0f0;
+  padding-bottom: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.admin-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.admin-count {
+  font-size: 28rpx;
+  color: #888;
+}
+
+/* 反馈列表容器 */
+.feedback-list {
+  max-height: 600rpx;
+  overflow-y: auto;
+  margin-bottom: 20rpx;
+}
+
+/* 单条反馈卡片 */
+.feedback-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f5dede;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-bottom: 25rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s;
+  height: auto;
+}
+
+.feedback-card:hover {
+  transform: translateY(-2rpx);
+}
+
+/* 复选框样式 */
+.feedback-checkbox {
+  margin-right: 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+/* 内容 & 时间区域 */
+.feedback-body {
+  flex: 1;
+}
+
+.feedback-content {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.4;
+  margin-left: 10px;
+  margin-bottom: 10rpx;
+}
+
+.feedback-time {
+  display: grid;
+  text-align: right; /* 设置文本右对齐 */
+  font-size: 24rpx;
+  color: #aaa;
+}
+
+/* 批量删除按钮 */
+.btn-delete-all {
+  display: block;
+  width: 100%;
+  padding: 20rpx;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 10rpx rgba(231, 76, 60, 0.3);
+}
+
+.btn-delete-all:active {
+  background-color: #c0392b;
+}

@@ -1,0 +1,37 @@
+<view class="page-section">
+  <view class="title">{{spot.name}}</view>
+
+  <swiper indicator-dots autoplay class="swiper">
+    <block wx:for="{{spot.images}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" class="swiper-img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="info-block">
+    <view class="info-title">📍 地址</view>
+    <view class="info-text">{{spot.address}}</view>
+  </view>
+
+  <view class="info-block">
+    <view class="info-title">🔻 历史意义</view>
+    <view class="info-text">{{spot.significance}}</view>
+  </view>
+
+  <view class="info-block">
+    <view class="info-title">✨ 景点特色</view>
+    <view class="info-text">{{spot.features}}</view>
+  </view>
+
+  <!-- 地图 -->
+  <map
+    longitude="{{spot.coordinate.longitude}}"
+    latitude="{{spot.coordinate.latitude}}"
+    scale="16"
+    markers="{{markers}}"
+    style="width: 100%; height: 400rpx; border-radius: 15rpx; margin-top: 30rpx;"
+  ></map>
+
+  <button class="btn-red" bindtap="openMap">打开地图导航</button>
+</view>

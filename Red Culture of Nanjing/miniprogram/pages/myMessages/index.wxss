@@ -1,0 +1,70 @@
+/* pages/myMessages/index.wxss */
+.page-section {
+  padding: 20rpx;
+}
+
+/* 每块标题 */
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 30rpx 0 10rpx 0;
+  color: #333;
+}
+
+/* 提示为空 */
+.empty-tip {
+  color: #999;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+/* 留言卡片 */
+.msg-card {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #f7d9d9;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 已审核留言样式略微不同 */
+.msg-card.approved {
+  background-color: #d9f7d6; /* 淡绿色 */
+}
+
+.nickname {
+  font-weight: bold;
+  display: block;
+  color: #7c0002;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: block;
+  margin: 10rpx 0;
+}
+
+.time {
+  font-size: 24rpx;
+  color: gray;
+}
+
+.btn-delete {
+  margin-top: 30rpx;
+  background-color: #ff4d4f;
+  color: white;
+  border-radius: 10px;
+}
+
+
+.filter-bar {
+  padding: 20rpx;
+  background-color: #fff3f3;
+  border-bottom: 1rpx solid #ffdcdc;
+}
+
+.picker-text {
+  font-size: 30rpx;
+  color: #a30000;
+}
+

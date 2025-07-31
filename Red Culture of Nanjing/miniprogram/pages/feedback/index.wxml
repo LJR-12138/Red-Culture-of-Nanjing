@@ -1,0 +1,31 @@
+<!--pages/feedback/index.wxml-->
+<!-- 意见输入与提交 -->
+<view class="page-section" wx:if="{{!isAdmin}}">
+  <textarea placeholder="请输入您的建议..." bindinput="onInput" value="{{content}}" />
+  <button class="btn-red" bindtap="submit">提交</button>
+</view>
+
+<!-- 管理员页面 -->
+<view class="admin-panel" wx:if="{{isAdmin}}">
+  <!-- 顶部 Header -->
+  <view class="admin-header">
+    <text class="admin-title">管理员模式</text>
+    <text class="admin-count">共 {{feedbackList.length}} 条反馈</text>
+  </view>
+
+  <!-- 反馈列表 -->
+  <checkbox-group class="feedback-list" bindchange="onCheckboxChange">
+    <block wx:for="{{feedbackList}}" wx:key="_id" wx:for-item="item">
+      <view class="feedback-card">
+        <checkbox class="feedback-checkbox" value="{{item._id}}" />
+        <view class="feedback-body">
+          <text class="feedback-content">{{item.content}}</text>
+          <text class="feedback-time">{{item.formattedTime}}</text>
+        </view>
+      </view>
+    </block>
+  </checkbox-group>
+
+  <!-- 批量删除按钮 -->
+  <button class="btn-delete-all" bindtap="deleteSelected">批量删除</button>
+</view>

@@ -1,0 +1,12 @@
+/**app.wxss**/
+/* 通用样式 */
+.page-section {
+  background: #fff5f5;
+}
+.btn-red {
+  background-color: #C92C2C;
+  color: #ffffff;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  text-align: center;
+}

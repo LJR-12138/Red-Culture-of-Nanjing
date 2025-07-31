@@ -1,0 +1,41 @@
+<!--pages/message/message.wxml-->
+<view class="page">
+
+<!-- 留言展示列表 -->
+<scroll-view
+  scroll-y
+  class="message-list"
+  scroll-with-animation
+  bindscroll="onScroll"
+>
+  <view wx:for="{{messages}}" wx:key="_id" class="message-card">
+    <image class="avatar" src="{{item.avatarUrl}}" />
+    <view class="msg-content">
+      <view class="header">
+        <text class="nickname">{{item.nickname}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+      <text class="content">{{item.content}}</text>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 留言输入栏 -->
+<view class="input-bar" wx:if="{{hasLogin && !hideInput}}">
+  <textarea
+    class="input-text"
+    placeholder="写下你的留言..."
+    auto-height
+    maxlength="100"
+    bindinput="onInput"
+    value="{{content}}"
+  />
+  <button class="submit-btn" bindtap="submitMessage">发布</button>
+</view>
+
+<!-- 未登录提示 -->
+<view wx:if="{{!hasLogin}}" class="login-tip">
+  请先登录后留言～
+</view>
+
+</view>

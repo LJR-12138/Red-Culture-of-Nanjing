@@ -1,0 +1,138 @@
+/* 页面主容器：红色背景 */
+.container {
+  padding: 60rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #c62828, #d32f2f); /* 红色渐变背景 */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 登录状态下选择头像按钮 */
+.avatar-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* ✅ 头像仍为圆形，保留白色背景，不使用阴影，不多包外框 */
+.avatar {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 60%;
+  background-color: rgb(255, 255, 255); /* 保留白色背景，营造“圆框”感 */
+  object-fit: cover;
+  border: none;
+}
+
+/* 昵称输入整体区域 */
+/* ✅ 登录区域整体卡片样式不变，但昵称输入框更宽 */
+.nickname-form {
+  width: 300px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 24rpx;
+  padding: 40rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8rpx 16rpx rgba(0, 0, 0, 0.08);
+}
+
+
+
+/* ✅ 昵称输入框更宽一些 */
+.nickname-input {
+  width: 100%; 
+  padding: 26rpx;
+  font-size: 30rpx;
+  border: none;
+  border-radius: 20rpx;
+  margin-bottom: 36rpx;
+  background-color: #f5f5f5;
+  text-align:left;
+}
+
+
+/* ✅ 登录按钮同样更宽（100%），圆角更大 */
+.login-btn {
+  width: 200px;
+  padding: 28rpx 0;
+  background-color: #b40d0d;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  font-weight: bold;
+  box-shadow: 0 8rpx 16rpx rgba(229, 57, 53, 0.35);
+}
+
+/* 登录成功后的资料区 */
+.profile-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 头像 + 昵称组合区 */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+  padding: 40rpx 30rpx;
+  background: linear-gradient(to bottom, #c62828, #d32f2f);
+  border-radius: 24rpx;
+  width: 90%;
+  box-shadow: none;
+}
+
+.nickname {
+  margin-top: 20rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* 菜单按钮区域 */
+/* ✅ menu：菜单改为竖直排列 */
+.menu {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  margin-bottom: 40rpx;
+  align-items: center;
+}
+
+/* ✅ 每个菜单按钮更大、更圆、更易点 */
+.menu button {
+  width: 100%;
+  padding: 30rpx 0;
+  background-color: #fff;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  color: #b71c1c;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+/* 退出按钮 */
+.logout-btn {
+  background-color: #b40d0d;
+  color: #fff;
+  padding: 22rpx 0;
+  width: 90%;
+  height: 60px;
+  font-size: 28rpx;
+  border-radius: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(156, 6, 6, 0.1);
+}
